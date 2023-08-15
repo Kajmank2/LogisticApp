@@ -13,6 +13,7 @@ public class VatCalculator extends AppCompatActivity {
         setContentView(R.layout.activity_vat_calculator);
         WebView webVIew = (WebView) findViewById(R.id.webwievCalculatorVat);
         webVIew.getSettings().setJavaScriptEnabled(true);
+        webVIew.getSettings().setDomStorageEnabled(true);
         webVIew.loadUrl("file:///android_asset/vat.html");
     }
 }

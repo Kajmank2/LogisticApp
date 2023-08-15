@@ -30,7 +30,7 @@
         android:background="@color/white"
         android:textColor="@color/white"
         android:backgroundTint="@color/black"
-        android:text="Sekcja I "
+        android:text="KALKULATOR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
