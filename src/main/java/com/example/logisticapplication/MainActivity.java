@@ -2,14 +2,13 @@ package com.example.logisticapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button buttoncalc, buttonaboutme, buttoncalculatorvat ;
+    private Button buttoncalc, buttonaKalkulatorSpalania, buttoncalculatorvat ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        buttonaboutme = (Button) findViewById(R.id.buttonaboutme);
-        buttonaboutme.setOnClickListener(new View.OnClickListener() {
+        buttonaKalkulatorSpalania = (Button) findViewById(R.id.buttonaKalkulatorSpalania);
+        buttonaKalkulatorSpalania.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openAboutme();
@@ -45,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     public void openAboutme() {
-        Intent intent = new Intent(this, AboutMe.class);
+        Intent intent = new Intent(this, KalkulatorSpalania.class);
         startActivity(intent);
     }
     public void openVatCalculator() {
-        Intent intent = new Intent(this, VatCalculator.class);
+        Intent intent = new Intent(this, News.class);
         startActivity(intent);
     }
 

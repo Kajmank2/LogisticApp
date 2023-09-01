@@ -16,5 +16,6 @@ public class Calcualator extends AppCompatActivity {
         webVIew.getSettings().setJavaScriptEnabled(true);
         webVIew.getSettings().setDomStorageEnabled(true);
         webVIew.loadUrl("file:///android_asset/Calculator.html");
+
     }
 }
