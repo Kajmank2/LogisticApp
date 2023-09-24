@@ -30,7 +30,7 @@
         android:background="@color/white"
         android:textColor="@color/white"
         android:backgroundTint="@color/black"
-        android:text="KALKULATOR"
+        android:text="KALKULATOR VAT"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonsekcjaii"
+        android:id="@+id/buttonKalkulatorKosztowDojazdu"
         android:text="Kalkulator kosztów dojazdu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

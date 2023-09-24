@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    private Button buttoncalc, buttonaKalkulatorSpalania, buttoncalculatorvat ;
+    private Button buttoncalc, buttonaKalkulatorSpalania, buttoncalculatorvat, buttonKalkulatorKosztowDojazdu ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 openVatCalculator();
             }
         });
+        buttonKalkulatorKosztowDojazdu = (Button) findViewById(R.id.buttonKalkulatorKosztowDojazdu);
+        buttonKalkulatorKosztowDojazdu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openKalkulatorKosztowDojazdu();
+            }
+        });
     }
 
 
@@ -49,6 +56,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openVatCalculator() {
         Intent intent = new Intent(this, News.class);
+        startActivity(intent);
+    }
+
+    public void openKalkulatorKosztowDojazdu() {
+        Intent intent = new Intent(this, KalkulatorKosztowDojazdu.class);
         startActivity(intent);
     }
 

@@ -18,6 +18,10 @@
             android:parentActivityName=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".KalkulatorKosztowDojazdu"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".KalkulatorSpalania"
             android:parentActivityName=".MainActivity"
             android:exported="false" />
