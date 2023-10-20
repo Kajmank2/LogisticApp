@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kalkulator Vat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container mt-1">
+    <div class="row justify-content-center">
+        <div class="col-md-1" style="height: 600px; width:600px;">
+            <div class="card" >
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>Paletowa jednostka ładunkowa</h3>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="dlugoscpalety">długość palety </label>
+                            <input type="number" class="form-control" value="1200" id="dlugoscpalety" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="szerokoscpalety">szerokość palety </label>
+                            <input type="number" class="form-control" value="800" id="szerokoscpalety" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wysokoscpalety">wysokosc palety </label>
+                            <input type="number" class="form-control" value="144" id="wysokoscpalety" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="masapalety"> masa palety </label>
+                            <input type="number" class="form-control" value="25" id="masapalety" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="dlugosckartonu">długość kartonu </label>
+                            <input type="number" class="form-control" value="300" id="dlugosckartonu" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="szerokosckartonu"> szerokość kartonu </label>
+                            <input type="number" class="form-control" value="200" id="szerokosckartonu" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wysokosckartonu"> wysokosckartonu </label>
+                            <input type="number" class="form-control" value="300" id="wysokosckartonu" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="masakartonu">masa kartonu </label>
+                            <input type="number" class="form-control" value="10" id="masakartonu" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="maxwasrtw">max warstw</label>
+                            <input type="number" class="form-control" value="5" id="maxwasrtw" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="maxwysokosc">Maksymalna wyokość</label>
+                            <input type="number" class="form-control" value="1800" id="maxwysokosc" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="maksobciazenie">Maksymalne obiciążenie</label>
+                            <input type="number" class="form-control" id="maksobciazenie" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ladunek">Ładunek ilość sztuk</label>
+                            <input type="number" value="2640" class="form-control" id="ladunek" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="opcja">Co chcesz policzyć ? </label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="ilosckartonWarstwa"
+                                       value="1" checked>
+                                <label class="form-check-label" for="ilosckartonWarstwa">
+                                    Ile kartonów mieści się na palecie w jednej warstwie.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="iloscwarstwpaleta"
+                                       value="2">
+                                <label class="form-check-label" for="iloscwarstwpaleta">
+                                    Ilość warstw jaką można ułożyć na palecie.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="iloscKartonJednaPaleta"
+                                       value="3">
+                                <label class="form-check-label" for="iloscKartonJednaPaleta">
+                                    Liczbę opakowań mieszczących się na jednej palecie.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="wysokoscPaletyZLadunkiem"
+                                       value="4">
+                                <label class="form-check-label" for="wysokoscPaletyZLadunkiem">
+                                    Wysokość palety z ładunkiem.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="masaLadunekZPaleta"
+                                       value="5">
+                                <label class="form-check-label" for="masaLadunekZPaleta">
+                                    Masę ładunku wraz z paletą.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="objetoscPalety"
+                                       value="6">
+                                <label class="form-check-label" for="objetoscPalety">
+                                    Objętość jednej palety.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="ilePaletJedenLadunek"
+                                       value="7">
+                                <label class="form-check-label" for="ilePaletJedenLadunek">
+                                    Ile palet stanowi ładunek.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="opcja" id="objetoscCalegoLadunku"
+                                       value="8">
+                                <label class="form-check-label" for="objetoscCalegoLadunku">
+                                    Objętość  całego ładunku.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success btn-block p-1"
+                                    onclick="oblicz()"><h3>Oblicz</h3></button>
+                        </div>
+                    </form>
+                    <div id="rezultat" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="Pjl.js"></script>
+</body>
+
+</html>

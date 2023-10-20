@@ -33,7 +33,6 @@ function oblicz() {
 
     console.log(stawkavat);
     if (input) {
-
         stawkavat = Number(input);
         if(stawkavat<0 || stawkavat>100){
             setTimeout(() => {

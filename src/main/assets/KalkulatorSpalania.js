@@ -37,12 +37,13 @@ function oblicz() {
         priceElement.style.border = "4px solid red";
     }
 
+
     var wynik = spalonePaliwo / iloscKM * 100
-    var rezultat = "Spalanie wyniesie: " + wynik.toFixed(2) + "L"
+    var rezultat = "Spalanie na 100 kilometrów wyniesie: " + wynik.toFixed(2) + "L"
     document.getElementById("rezultat").innerHTML = rezultat
 
     var kosztjeden= spalonePaliwo / iloscKM * 100;
-    var kosztcalkowity = cena * S
+    var kosztcalkowity = cena * spalonePaliwo
     var rezultatCena = "Cena za przejazd wyniesie " + kosztcalkowity.toFixed(2) + "ZŁ"
         document.getElementById("rezultatCena").innerHTML = rezultatCena
 }

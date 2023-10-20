@@ -79,8 +79,8 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonsekcjaiii"
-        android:text="####"
+        android:id="@+id/buttonpjl"
+        android:text="Paletowe Jednostki Ładunkowe"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
