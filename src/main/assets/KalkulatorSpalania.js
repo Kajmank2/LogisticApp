@@ -5,38 +5,6 @@ function oblicz() {
     var iloscKM = Number(document.getElementById("iloscKM").value);
     var cena = Number(document.getElementById("Cena").value);
 
-    if(!iloscKM){
-        setTimeout(() => {
-            require.style.display='none';
-            priceElement.style.border = "";
-        }, 1500);
-        const btngroup = document.querySelector(".btn-toolbar");
-        const require = document.createElement("p");
-        require.classList.add("alert");
-        require.style.color = "red";
-        require.innerHTML="nieprawidłowy format";
-        btngroup.appendChild(require);
-        const priceElement = document.querySelector("#wartosc");
-        priceElement.style.border = "4px solid red";
-    }
-
-    console.log(iloscKM);
-
-    if(!spalonePaliwo){
-        setTimeout(() => {
-            require.style.display='none';
-            priceElement.style.border = "";
-        }, 1500);
-        const btngroup = document.querySelector(".btn-toolbar");
-        const require = document.createElement("p");
-        require.classList.add("alert");
-        require.style.color = "red";
-        require.innerHTML="nieprawidłowy format";
-        btngroup.appendChild(require);
-        const priceElement = document.querySelector("#wartosc");
-        priceElement.style.border = "4px solid red";
-    }
-
 
     var wynik = spalonePaliwo / iloscKM * 100
     var rezultat = "Spalanie na 100 kilometrów wyniesie: " + wynik.toFixed(2) + "L"

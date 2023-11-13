@@ -15,41 +15,6 @@ function oblicz() {
     var input = Number(document.querySelector("#inputValue").value);
     var wartosc = Number(document.getElementById("wartosc").value);
 
-    if(!wartosc){
-        setTimeout(() => {
-            require.style.display='none';
-            priceElement.style.border = "";
-        }, 1500);
-        const btngroup = document.querySelector(".btn-toolbar");
-        const require = document.createElement("p");
-        require.classList.add("alert");
-        require.style.color = "red";
-        require.innerHTML="nieprawidłowy format";
-        btngroup.appendChild(require);
-        const priceElement = document.querySelector("#wartosc");
-        priceElement.style.border = "4px solid red";
-
-    }
-
-    console.log(stawkavat);
-    if (input) {
-        stawkavat = Number(input);
-        if(stawkavat<0 || stawkavat>100){
-            setTimeout(() => {
-                require.style.display='none';
-            }, 1500);
-            const btngroup = document.querySelector(".btn-group");
-            const require = document.createElement("p");
-            require.classList.add("alert");
-            require.style.color = "red";
-            require.innerHTML="wpisz wartość od 0 do 100";
-            btngroup.appendChild(require);
-
-        }
-        stawkavat = Number(input) / 100;
-        document.querySelector("#inputValue").value = null;
-    }
-
     var opcja = document.querySelector('input[name="opcja"]:checked').value;
 
     if (opcja == 1) {
